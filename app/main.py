@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 origin = ['*']
 
 app = FastAPI()
-app.mount("/media", StaticFiles(directory="../media"), name="media")
+app.mount("/media", StaticFiles(directory="media"), name="media")
 
 app.add_middleware(
     CORSMiddleware,
