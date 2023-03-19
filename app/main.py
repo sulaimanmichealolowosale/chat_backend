@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from sqlalchemy.ext.declarative import declarative_base
 from .routes import user, auth, message
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 # from .database import engine
 # from app.Models import user
