@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 origin = ['*']
 
 app = FastAPI()
-
+app.mount("/media", StaticFiles(directory="../media"), name="media")
 
 app.add_middleware(
     CORSMiddleware,
