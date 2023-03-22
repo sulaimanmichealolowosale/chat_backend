@@ -10,7 +10,7 @@ from ..oauth2 import get_current_user, get_current_admin_user
 
 router = APIRouter(
     tags=["Users"],
-    prefix="/user"
+    prefix="/api/user"
 )
 
 
