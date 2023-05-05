@@ -14,7 +14,7 @@ class User(Base):
     email = Column(String, nullable=False, unique=True)
     role = Column(String)
     password = Column(String, nullable=False)
-    image_url = Column(String)
+    image_url = Column(String, nullable=True)
     verified = Column(Boolean, nullable=False, server_default=text("0"))
     level = Column(Integer, nullable=False)
     active = Column(Boolean, nullable=False, server_default=text("0"))

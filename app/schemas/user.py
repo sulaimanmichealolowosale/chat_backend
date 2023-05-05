@@ -18,6 +18,7 @@ class CreateUser(BaseModel):
     password: constr(strip_whitespace=True,
                      min_length=8, max_length=20)
 
+
 class UpdateUser(BaseModel):
     first_name: constr(strict=True, strip_whitespace=True)
     last_name: constr(strict=True, strip_whitespace=True)
@@ -27,6 +28,10 @@ class UpdateUser(BaseModel):
                      min_length=8, max_length=20)
 
 
+class UpdatePassword(BaseModel):
+    password: str
+
+
 class GetUsers(BaseModel):
     id: int
     first_name: str
@@ -34,6 +39,7 @@ class GetUsers(BaseModel):
     email: EmailStr
     role: str
     level: str
+    active: bool
     image_url: str
     staff_id: str
 

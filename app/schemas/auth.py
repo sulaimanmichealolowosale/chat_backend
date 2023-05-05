@@ -13,6 +13,7 @@ class GetAuthDetails(BaseModel):
     role: str
     level: str
     image_url: str
+    active: bool
     staff_id: str
     access_token: str
     refresh_token: str
